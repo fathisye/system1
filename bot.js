@@ -35,7 +35,7 @@ var ti={}
 
 client.on('ready', function(){
     var ms = 60000 ;
-    var setGame = [`${client.guilds.size} Server`,'!help','Type !help',`${client.users.size} Members`,'!inv','By: AboRoh | BaronTube'];
+    var setGame = [`${client.guilds.size} !help`,'!help','Type !help',`${client.users.size} Members`,'!inv','By: !help | AboRoh'];
     var i = -1;
     var j = 0;
     setInterval(function (){
