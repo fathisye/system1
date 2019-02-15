@@ -27,7 +27,7 @@ const youtube = new YouTube("AIzaSyAdORXg7UZUo7sePv97JyoDqtQVi3Ll0b8");
 const sql = require("sqlite");
 const dateFormat = require('dateformat'); 
 const pretty = require('pretty-ms') 
-const prefix = '!';
+const prefix = 'G.';
 var table = require('table').table
 var ti={}  
 ,spee={}
@@ -35,7 +35,7 @@ var ti={}
 
 client.on('ready', function(){
     var ms = 60000 ;
-    var setGame = [`${client.guilds.size}${client.users.size} Members`,'!.inv''];
+    var setGame = [`${client.guilds.size} Server`,'!help','Type !help',`${client.users.size} Members`,'!inv','By: AboRoh | BaronTube'];
     var i = -1;
     var j = 0;
     setInterval(function (){
@@ -83,7 +83,7 @@ if (message.content.startsWith(prefix + 'help')) { /// This is The DMS Code Send
 『!{prefix}google/للبحث في قوقل عن طريق الدسكورد』
 『!{prefix}perms/يعرض لك برمشناتك بالسيرفر』
 『!{prefix}z5rf/يزخرف لك كلمة او جملة』
-『!{prefix}rooms/يعرض لك كل الرومات الي بالسيرفر مع عددها』
+『!{!{prefix}rooms/يعرض لك كل الرومات الي بالسيرفر مع عددها』
 『!{prefix}roles/يعرض لك كل الرانكات بالسيرفر بشكل جميل』
 『!{prefix}emojilist/يعرض لك كل الايموجيات الي بالسيرفر』
 『!{prefix}say/يكرر الكلام الي تكتبو』
@@ -110,7 +110,7 @@ if (message.content.startsWith(prefix + 'help')) { /// This is The DMS Code Send
 『!{prefix}roleremove @user <rank> / لازالة الرتبة من شخص معين』
 『!{prefix}give all <rank> / لأعطاء رتبة للجميع』
 『!{prefix}give humans <rank> / لأعطاء رتبة للاشخاص فقط』
-『1{prefix}give bots <rank> / لأعطاء رتبة لجميع البوتات』
+『!{prefix}give bots <rank> / لأعطاء رتبة لجميع البوتات』
 『!{prefix}hchannel / اخفاء الشات』
 『!{prefix}schannel / اضهار الشات المخفية』
 『!{prefix}clr <numbr> / مسح الشات بعدد』
@@ -153,10 +153,9 @@ if (message.content.startsWith(prefix + 'help')) { /// This is The DMS Code Send
 『!{prefix}عواصم عشوائي/عواصم』
 『!{prefix}لعبة كت تويت / كت تويت』
 『!{prefix}roll <number> / قرعة』
-『${prefix}لو خيروك بطريقة حلوة / لو خيروك』
-『${prefix}لعبة مريم / مريم』
-『${prefix}فوائد ونصائح  / هل تعلم』
-『${prefix}يعطيك عقابات قاسية / عقاب 』
+『!{prefix}لو خيروك بطريقة حلوة / لو خيروك』
+『!{prefix}لعبة مريم / مريم』
+『!{prefix}يعطيك عقابات قاسية / عقاب 』
 『=.=.=.=.=.=.=.=.=.=.=.=.=.=.=.=.=.=.』
 『welcome يتم الترحيب فى روم باسم』
 『!setwelcomer <text channel name> لاختيار روم للترحيب』
