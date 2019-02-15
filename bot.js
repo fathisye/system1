@@ -35,7 +35,7 @@ var ti={}
 
 client.on('ready', function(){
     var ms = 60000 ;
-    var setGame = [`${client.guilds.size} !help`,'!help','Type !help',`${client.users.size} Members`,'!inv','By: !help | AboRoh'];
+    var setGame = [`${client.guilds.size}'!help'`${client.users.size} Members'];
     var i = -1;
     var j = 0;
     setInterval(function (){
@@ -46,7 +46,7 @@ client.on('ready', function(){
             j = -1;
         }
         i = i+j;
-        client.user.setGame(setGame[i],`http://www.twitch.tv/barontube`);
+        client.user.setGame(setGame[i],``);
     }, ms);
     console.log(` ╔═══╗──╔╗ |> Name: ${client.user.username}`);
  console.log(` ║╔═╗║──║║ |> Servers: ${client.guilds.size}`);
@@ -68,98 +68,98 @@ if (message.content.startsWith(prefix + 'help')) { /// This is The DMS Code Send
 **
         ***__General orders__***
 **
-『!allbots/لعرض جميع البوتات الي بالسيرفر』
-『!server/يعرض لك معلومات عن السيرفر』
-『!bot/يعرض لك كل معلومات البوت』
-『!count/يعرض لك عدد الاشخاص بالسيرفر بدون بوتات』
-『!invites/ يعرض لك  عدد انفايتاتك بالسيرفر 』
-『!invinfo <invitelink here> / لمعلومات عن الدعوه』
+『!{prefix}allbots/لعرض جميع البوتات الي بالسيرفر』
+『!{prefix}server/يعرض لك معلومات عن السيرفر』
+『!{prefix}bot/يعرض لك كل معلومات البوت』
+『!{prefix}count/يعرض لك عدد الاشخاص بالسيرفر بدون بوتات』
+『!{prefix}invites/ يعرض لك  عدد انفايتاتك بالسيرفر 』
+『!{prefix}invinfo <invitelink here> / لمعلومات عن الدعوه』
 『 مثال : invinfo m82n8P
-『!invite-codes/يعرض لك روابط الانفايتات حكك في السيرفر 』
-『!cal/اله حاسبة』 
-『!trans <language> <any thing>/يترجم لك الي تبيه من اي لغة』
-『!short/يختصر لك رابط كبير الى رابط صغير』
-『!tag/يكتب لك الكلمة بشكل جميل وكبير』
-『!google/للبحث في قوقل عن طريق الدسكورد』
-『!perms/يعرض لك برمشناتك بالسيرفر』
-『!z5rf/يزخرف لك كلمة او جملة』
-『!rooms/يعرض لك كل الرومات الي بالسيرفر مع عددها』
-『!roles/يعرض لك كل الرانكات بالسيرفر بشكل جميل』
-『!emojilist/يعرض لك كل الايموجيات الي بالسيرفر』
-『!say/يكرر الكلام الي تكتبو』
-『!image/صورة السيرفر』
-『!members/عرض لك عدد كل حالات الاشخاص وعدد البوتات وعدد الاشخاص』
-『!id/معلومات عنك』
-『!bans / عدد الاشخاص المبندة 』
-『!avatar/صورتك او صورة الي تمنشنو』
-『!embed/يكرر الي تقولو بشكل حلو』 
-『!emoji <any things>/لتحويل اي كلمه تقولها الي ايموجي』
-『!inv/لدعوة البوت الى سيرفرك』
-『!support/سيرفر الدعم』
-『!contact/ارسال اقتراح او لمراسلة صاحب البوت』
+『!{prefix}invite-codes/يعرض لك روابط الانفايتات حكك في السيرفر 』
+『!{prefix}cal/اله حاسبة』 
+『!{prefix}trans <language> <any thing>/يترجم لك الي تبيه من اي لغة』
+『!{prefix}short/يختصر لك رابط كبير الى رابط صغير』
+『!{prefix}tag/يكتب لك الكلمة بشكل جميل وكبير』
+『!{prefix}google/للبحث في قوقل عن طريق الدسكورد』
+『!{prefix}perms/يعرض لك برمشناتك بالسيرفر』
+『!{prefix}z5rf/يزخرف لك كلمة او جملة』
+『!{!{prefix}rooms/يعرض لك كل الرومات الي بالسيرفر مع عددها』
+『!{prefix}roles/يعرض لك كل الرانكات بالسيرفر بشكل جميل』
+『!{prefix}emojilist/يعرض لك كل الايموجيات الي بالسيرفر』
+『!{prefix}say/يكرر الكلام الي تكتبو』
+『!{prefix}image/صورة السيرفر』
+『!{prefix}members/عرض لك عدد كل حالات الاشخاص وعدد البوتات وعدد الاشخاص』
+『!{prefix}id/معلومات عنك』
+『!{prefix}bans / عدد الاشخاص المبندة 』
+『!{prefix}avatar/صورتك او صورة الي تمنشنو』
+『!{prefix}embed/يكرر الي تقولو بشكل حلو』 
+『!{prefix}emoji <any things>/لتحويل اي كلمه تقولها الي ايموجي』
+『!{prefix}inv/لدعوة البوت الى سيرفرك』
+『!{prefix}support/سيرفر الدعم』
+『!{prefix}contact/ارسال اقتراح او لمراسلة صاحب البوت』
 **
   `
 ,`
         ***__Administrative Orders__***
 **
-『!move @user /  لسحب الشخص الى روومك』  
-『!bc / رسالة جماعية الى كل اعضاء السيرفر』
-『!bk / رسالة جماعيه مع』
-『!rolebc <everyone or @role> / راسال رساله جماعيه لرتبه محدده』
-『!role @user <rank> / لأعطاء رتبة لعضو معين』
-『!roleremove @user <rank> / لازالة الرتبة من شخص معين』
-『!give all <rank> / لأعطاء رتبة للجميع』
-『!give humans <rank> / لأعطاء رتبة للاشخاص فقط』
-『!give bots <rank> / لأعطاء رتبة لجميع البوتات』
-『!hchannel / اخفاء الشات』
-『!schannel / اضهار الشات المخفية』
-『!clr <numbr> / مسح الشات بعدد』
-『!clear / مسح الشات』
-『!mute @user <time> / اعطاء العضو ميوت 』
-『!unmute @user / لفك الميوت عن الشخص 』
-『!kick @user <reason> / طرد الشخص من السيرفر』
-『!ban @user <reason> / حضر الشخص من السيرفر』
-『!mutechannel / تقفيل الشات』
-『!unmutechannel / فتح الشات』
-『!dc / مسح كل الرومات』
-『!dr / <مسح كل الرانكات <لازم تكون رانك البوت فوق كل الرانكات』
-『!ct <name> / انشاء شات』
-『!cv <name> / انشاء رووم فويس』
-『!temp / لانشاء روم مؤقت』
-『!delet <name> / مسح الشات او الرووم فويس』
-『!make <number> / ينشا لك الوان مع كم الوان تبي』
-『!color <number> / لختيار لون』
-『!deletecolors <number> / لحذف الالوان』
+『!{prefix}move @user /  لسحب الشخص الى روومك』  
+『!{prefix}bc / رسالة جماعية الى كل اعضاء السيرفر』
+『!{prefix}bk / رسالة جماعيه مع』
+『!{prefix}rolebc <everyone or @role> / راسال رساله جماعيه لرتبه محدده』
+『!{prefix}role @user <rank> / لأعطاء رتبة لعضو معين』
+『!{prefix}roleremove @user <rank> / لازالة الرتبة من شخص معين』
+『!{prefix}give all <rank> / لأعطاء رتبة للجميع』
+『!{prefix}give humans <rank> / لأعطاء رتبة للاشخاص فقط』
+『!{prefix}give bots <rank> / لأعطاء رتبة لجميع البوتات』
+『!{prefix}hchannel / اخفاء الشات』
+『!{prefix}schannel / اضهار الشات المخفية』
+『!{prefix}clr <numbr> / مسح الشات بعدد』
+『!{prefix}clear / مسح الشات』
+『!{prefix}mute @user <time> / اعطاء العضو ميوت 』
+『!{prefix}unmute @user / لفك الميوت عن الشخص 』
+『!{prefix}kick @user <reason> / طرد الشخص من السيرفر』
+『!{prefix}ban @user <reason> / حضر الشخص من السيرفر』
+『!{prefix}mutechannel / تقفيل الشات』
+『!{prefix}unmutechannel / فتح الشات』
+『!{prefix}dc / مسح كل الرومات』
+『!{prefix}dr / <مسح كل الرانكات <لازم تكون رانك البوت فوق كل الرانكات』
+『!{prefix}ct <name> / انشاء شات』
+『!{prefix}cv <name> / انشاء رووم فويس』
+『!{prefix}temp / لانشاء روم مؤقت』
+『!{prefix}delet <name> / مسح الشات او الرووم فويس』
+『!{prefix}make <number> / ينشا لك الوان مع كم الوان تبي』
+『!{prefix}color <number> / لختيار لون』
+『!{prefix}deletecolors <number> / لحذف الالوان』
 **
    `,`
         ***__Music orders__***
 **
-『!play / لتشغيل أغنية برآبط أو بأسم』
-『!skip / لتجآوز الأغنية الحآلية』
-『!pause / إيقآف الأغنية مؤقتا』
-『!resume / لموآصلة الإغنية بعد إيقآفهآ مؤقتا』
-『!vol / لتغيير درجة الصوت 100 - 0』
-『!stop / لإخرآج البوت من الروم』
-『!np / لمعرفة الأغنية المشغلة حآليا』
-『!queue / لمعرفة قآئمة التشغيل』
+『!{prefix}play / لتشغيل أغنية برآبط أو بأسم』
+『!{prefix}skip / لتجآوز الأغنية الحآلية』
+『!{prefix}pause / إيقآف الأغنية مؤقتا』
+『!{prefix}resume / لموآصلة الإغنية بعد إيقآفهآ مؤقتا』
+『!{prefix}vol / لتغيير درجة الصوت 100 - 0』
+『!{prefix}stop / لإخرآج البوت من الروم』
+『!{prefix}np / لمعرفة الأغنية المشغلة حآليا』
+『!{prefix}queue / لمعرفة قآئمة التشغيل』
 **
         ***__Games orders__***
  **       
-『!rps / حجر ورقة مقص』
-『!speed / اسرع كتابة』
-『!quas / اسئلة عامة』
-『!نكت / نكت 』
-『!لعبة فكك / فكك』
-『!عواصم عشوائي/عواصم』
-『!لعبة كت تويت / كت تويت』
-『!roll <number> / قرعة』
-『!لو خيروك بطريقة حلوة / لو خيروك』
-『!لعبة مريم / مريم』
-『!يعطيك عقابات قاسية / عقاب 』
+『!{prefix}rps / حجر ورقة مقص』
+『!{prefix}speed / اسرع كتابة』
+『!{prefix}quas / اسئلة عامة』
+『!{prefix}نكت / نكت 』
+『!{prefix}لعبة فكك / فكك』
+『!{prefix}عواصم عشوائي/عواصم』
+『!{prefix}لعبة كت تويت / كت تويت』
+『!{prefix}roll <number> / قرعة』
+『!{prefix}لو خيروك بطريقة حلوة / لو خيروك』
+『!{prefix}لعبة مريم / مريم』
+『!{prefix}يعطيك عقابات قاسية / عقاب 』
 『=.=.=.=.=.=.=.=.=.=.=.=.=.=.=.=.=.=.』
 『welcome يتم الترحيب فى روم باسم』
 『!setwelcomer <text channel name> لاختيار روم للترحيب』
-『!voiceonline / لتفعيل روم الفويس اونلاين』
+『!{prefix}voiceonline / لتفعيل روم الفويس اونلاين』
 **
    
 `]
