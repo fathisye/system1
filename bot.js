@@ -79,7 +79,7 @@ if (message.content.startsWith(prefix + 'help')) { /// This is The DMS Code Send
 『$cal/اله حاسبة』 
 『$trans <language> <any thing>/يترجم لك الي تبيه من اي لغة』
 『$short/يختصر لك رابط كبير الى رابط صغير』
-『!tag/يكتب لك الكلمة بشكل جميل وكبير』
+『$tag/يكتب لك الكلمة بشكل جميل وكبير』
 『$google/للبحث في قوقل عن طريق الدسكورد』
 『$perms/يعرض لك برمشناتك بالسيرفر』
 『$z5rf/يزخرف لك كلمة او جملة』
