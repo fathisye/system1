@@ -579,7 +579,6 @@ client.on('message' , message => {
 });
 
 /*افتار*/
-
 client.on('message', message => {
     if (message.content.startsWith(prefix + "avatar")) {
         var mentionned = message.mentions.users.first();
